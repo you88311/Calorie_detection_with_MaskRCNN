@@ -1,7 +1,8 @@
 <Mask RCNN 2kcal>
-Mask RCNNÀ» ÅëÇØ Mask¸¦ ±¸ÇÏ°í À½½Ä(ÇöÀç´Â °úÀÏ 3Á¾·ù: »ç°ú, ¹Ù³ª³ª, ¿À·»Áö)ÀÇ Ä®·Î¸®¸¦ ÃøÁ¤ÇÏ´Â ÇÁ·Î±×·¥
+Mask RCNNì„ í†µí•´ Maskë¥¼ êµ¬í•˜ê³  ìŒì‹(í˜„ì¬ëŠ” ê³¼ì¼ 3ì¢…ë¥˜: ì‚¬ê³¼, ë°”ë‚˜ë‚˜, ì˜¤ë Œì§€)ì˜ ì¹¼ë¡œë¦¬ë¥¼ ì¸¡ì •í•˜ëŠ” í”„ë¡œê·¸ë¨
 
-1. requirements¿¡ ÀÖ´Â ¸ğµâÀ» ¸ğµÎ ´Ù¿î.(pip install -r requirements.txt) 
-(pycocotools¹®Á¦°¡ »ı±æ °æ¿ì Ãß°¡·Î pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI")
-2. images Æú´õ¿¡¼­ Ä®·Î¸®¸¦ ±¸ÇÏ°íÀÚ ÇÏ´Â »çÁø »ğÀÔ.(´Ù¼ö¸¦ ³ÖÀ» °æ¿ì ·£´ıÇÏ°Ô ¼±ÅÃ)
-3. mrcnn with coco_no dataset.py ½ÇÇàÇÏ¿© Ä®·Î¸® °è»ê.
+1. requirementsì— ìˆëŠ” ëª¨ë“ˆì„ ëª¨ë‘ ë‹¤ìš´.(pip install -r requirements.txt) 
+(pycocotoolsë¬¸ì œê°€ ìƒê¸¸ ê²½ìš° ì¶”ê°€ë¡œ pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI")
+2. https://github.com/matterport/Mask_RCNN/releases ì—ì„œ Mask R-CNN 2.0ì˜ mask_rcnn_coco.h5 ë‹¤ìš´ ë°›ì•„ mrcnn with coco_no dataset.pyê°€ ìˆëŠ” ë””ë ‰í† ë¦¬ì— ì €ì¥
+3. images í´ë”ì—ì„œ ì¹¼ë¡œë¦¬ë¥¼ êµ¬í•˜ê³ ì í•˜ëŠ” ì‚¬ì§„ ì‚½ì….(ë‹¤ìˆ˜ë¥¼ ë„£ì„ ê²½ìš° ëœë¤í•˜ê²Œ ì„ íƒ)
+4. mrcnn with coco_no dataset.py ì‹¤í–‰í•˜ì—¬ ì¹¼ë¡œë¦¬ ê³„ì‚°.
