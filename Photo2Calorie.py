@@ -1,8 +1,5 @@
 # coding: utf-8
 
-# In[1]:
-
-
 # %load mcnn_with_coco.py
 import os
 import sys
@@ -68,7 +65,6 @@ dataset.load_coco("C:/Program Files/Python36/Lib/site-packages/pycocotools/coco"
 dataset.prepare()
 """
 
-# In[30]:
 class_names = ['BG', 'person', 'bicycle', 'car', 'motorcycle', 'airplane',
                'bus', 'train', 'truck', 'boat', 'traffic light',
                'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird',
@@ -85,25 +81,18 @@ class_names = ['BG', 'person', 'bicycle', 'car', 'motorcycle', 'airplane',
                'sink', 'refrigerator', 'book', 'coin', 'vase', 'scissors',
                'teddy bear', 'hair drier', 'toothbrush']
 
-# Print class names
-
-
-# In[265]:
-
-
 # Load a random image from the images folder
-file_names = next(os.walk(IMAGE_DIR))[2]
+
+while True:
+    file_names = next(os.walk(IMAGE_DIR))[2]
+    file_name = random.choice(file_names)
+    if file_name != 'desktop.ini':
+        break
+
+image = skimage.io.imread(os.path.join(IMAGE_DIR, file_name))
 print("파일 이름:",file_names)
-image = skimage.io.imread(os.path.join(IMAGE_DIR, random.choice(file_names)))
-
-# In[266]:
-
-
 # Run detection
 results = model.detect([image], verbose=1)
-
-# In[267]:
-
 
 print("-----------------visualization------------------")
 # Visualize results
@@ -111,28 +100,14 @@ r = results[0]
 
 visualize.display_instances(image, r['rois'], r['masks'], r['class_ids'],
                            class_names, r['scores'])
-"""
-results.append({
-                "rois": final_rois,
-                "class_ids": final_class_ids,
-                "scores": final_scores,
-                "masks": final_masks,
-            })
-"""
-
-# In[270]:
-
 
 class Fruit:
     def __init__(self):
-        # 바나나,사과,오렌지
         self.name = ['banana', 'apple', 'orange']
         self.class_ids = [47, 48, 50, 55]
         self.mean_mass = [175.18, 244.063, 282.79]
         self.mean_volume = [190, 310, 270]
-        # 평균 fruit 크기: 평균 동전 크기 = 1:mean_ratio
         self.mean_ratio = [15.033, 13.9, 13.88]
-        #self.mean_ratio = [14.0911, 13.444, 13.88]
         self.num = [0, 0, 0]
         self.mass = [0, 0, 0]
         self.volume = [0, 0, 0]
@@ -176,9 +151,6 @@ class Fruit:
 
         print("---------------------------------------------------")
         print("총 칼로리: ", total_calory)
-
-
-# In[272]:
 
 
 height = image.shape[0]
